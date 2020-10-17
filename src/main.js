@@ -1,13 +1,13 @@
-import { app } from 'hyperapp'
+import { app } from 'hyperapp';
 
 // App init imports
-import init from '/init'
-import view from '/views/app'
+import init from '/init';
+import view from '/views/app';
 
-import '/styles/base.css'
+import '/styles/base.css';
 
 // Initialize the app on the #app div
-app({ init, view, node: document.getElementById('app') })
+app({ init, view, node: document.getElementById('app') });
 
 // Enable the service worker when running the build command
 // if (process.env.NODE_ENV === 'production') {

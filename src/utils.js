@@ -1,1 +1,1 @@
-export const decodeNumberInput = event => parseInt(event.target.value || 0)
+export const decodeNumberInput = event => parseInt(event.target.value || 0);

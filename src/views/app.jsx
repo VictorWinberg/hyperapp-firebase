@@ -1,6 +1,6 @@
-import { SetA, SetB } from '/actions'
-import { decodeNumberInput } from '/utils'
-import utils from '/styles/utils.css'
+import { SetA, SetB } from '/actions';
+import { decodeNumberInput } from '/utils';
+import utils from '/styles/utils.css';
 
 // Root application view
 export default state => (
@@ -25,4 +25,4 @@ export default state => (
       <code>state: {JSON.stringify(state, null, 2)}</code>
     </pre>
   </main>
-)
+);
