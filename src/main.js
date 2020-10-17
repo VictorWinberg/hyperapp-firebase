@@ -2,7 +2,7 @@ import { app } from 'hyperapp';
 
 // App init imports
 import init from '/init';
-import view from '/views/app';
+import view from '/views/app-js';
 
 import '/styles/base.css';
 
