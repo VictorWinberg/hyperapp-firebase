@@ -4,10 +4,11 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "/*": ["src/*"],
+      "/*": ["src/*"]
     },
     "plugins": [
-      { // See https://github.com/mrmckeb/typescript-plugin-css-modules for more options
+      {
+        // See https://github.com/mrmckeb/typescript-plugin-css-modules for more options
         "name": "typescript-plugin-css-modules",
         "options": {
           "classnameTransform": "camelCaseOnly",
@@ -16,9 +17,6 @@
       }
     ]
   },
-  "include": [
-    "index.d.ts",
-    "src/**/*"
-  ],
+  "include": ["index.d.ts", "src/**/*"],
   "exclude": ["node_modules", "public", ".cache"]
 }
