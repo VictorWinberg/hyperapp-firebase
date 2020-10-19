@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "name": "hyperapp",
-  "description": "Hyperapp",
+  "name": "hyperapp-firebase",
+  "description": "Hyperapp and Firebase",
   "author": "VictorWinberg <victor.m.winberg@gmail.com>",
   "scripts": {
     "start": "parcel src/index.html --open",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@hyperapp/html": "^1.2.3",
+    "firebase": "^7.24.0",
     "hyperapp": "^2.0.8",
     "sanitize.css": "^11.0.0"
   },
