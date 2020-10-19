@@ -1,16 +1,18 @@
 <h1 align="center">
-  hyperapp
+  hyperapp - firebase
 </h1>
 
 > Using [Hyperapp](https://github.com/jorgebucaran/hyperapp) with [Hyperapp starter template](https://github.com/loteoo/hyperapp-starter)
+
+> Using [Firebase](https://firebase.google.com/) with [Cloud Firestore](https://firebase.google.com/products/firestore) and more ...
 
 ## 🚀 Quick start:
 
 ```
 # Clone project
-git clone https://github.com/VictorWinberg/hyperapp.git
+git clone https://github.com/VictorWinberg/hyperapp-firebase.git
 
-cd hyperapp
+cd hyperapp-firebase
 
 npm install         # Install dependencies
 npm start           # Dev server + live reload
@@ -20,7 +22,20 @@ npm start           # Dev server + live reload
 npm run build   # Build for production and generate service worker
 ```
 
-## Features
+## 🔥 Firebase:
+
+```
+# Log into Firebase
+firebase login
+
+# Serve your project locally
+firebase serve
+
+# Deploy to a Firebase project
+firebase deploy
+```
+
+## 💡 Features:
 
 - [Parcel](https://parceljs.org/) for dev tooling
 - CSS Modules (to enable go in any JS file, open the command palette, type `> Select TypeScript Version`, pick `Use Workspace Version`)

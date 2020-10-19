@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "hyperapp-firebase",
-  "description": "Hyperapp and Firebase",
+  "description": "Hyperapp - Firebase",
   "author": "VictorWinberg <victor.m.winberg@gmail.com>",
   "scripts": {
     "start": "parcel src/index.html --open",
@@ -62,6 +62,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/VictorWinberg/hyperapp"
+    "url": "https://github.com/VictorWinberg/hyperapp-firebase"
   }
 }
