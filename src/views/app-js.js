@@ -4,6 +4,8 @@ import { SetA, SetB } from '/actions';
 import { decodeNumberInput } from '/utils';
 import utils from '/styles/utils.css';
 
+const withPayload = filter => (_, x) => filter(x);
+
 // Root application view
 export default state =>
   main({ class: utils.container }, [
@@ -12,12 +14,12 @@ export default state =>
       input({
         type: 'number',
         value: state.a,
-        oninput: [SetA, decodeNumberInput],
+        oninput: withPayload(event => [SetA, decodeNumberInput(event)]),
       }),
       input({
         type: 'number',
         value: state.b,
-        oninput: [SetB, decodeNumberInput],
+        oninput: withPayload(event => [SetB, decodeNumberInput(event)]),
       }),
     ]),
     h2({}, [text(`${state.a} + ${state.b} = ${state.a + state.b}`)]),
