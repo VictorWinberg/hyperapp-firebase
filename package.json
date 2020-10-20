@@ -10,9 +10,9 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "dependencies": {
-    "@hyperapp/html": "^1.2.3",
+    "@hyperapp/html": "^1.1.1",
     "firebase": "^7.24.0",
-    "hyperapp": "^2.0.8",
+    "hyperapp": "^1.2.10",
     "sanitize.css": "^11.0.0"
   },
   "devDependencies": {

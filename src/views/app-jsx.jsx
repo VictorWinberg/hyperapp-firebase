@@ -1,23 +1,42 @@
-import { SetA, SetB } from '/actions';
+import * as firebase from 'firebase';
 import { decodeNumberInput } from '/utils';
+import { auth } from '/firebase';
 import utils from '/styles/utils.css';
 
-const withPayload = filter => (_, x) => filter(x);
+const provider = new firebase.auth.GoogleAuthProvider();
+
+const oncreate = actions => () => {
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      actions.signedIn();
+    } else {
+      actions.signedOut();
+    }
+  });
+};
+
+const SignInBtn = () => (
+  <button onclick={() => auth.signInWithPopup(provider)}>Sign in</button>
+);
+
+const SignOutBtn = () => (
+  <button onclick={() => auth.signOut()}>Sign out</button>
+);
 
 // Root application view
-export default state => (
-  <main class={utils.container}>
+export default (state, actions) => (
+  <main class={utils.container} oncreate={oncreate(actions)}>
     <h1>Do more with less</h1>
     <div className={utils.grid}>
       <input
         type="number"
         value={state.a}
-        oninput={withPayload(event => [SetA, decodeNumberInput(event)])}
+        oninput={event => actions.setA(decodeNumberInput(event))}
       />
       <input
         type="number"
         value={state.b}
-        oninput={withPayload(event => [SetB, decodeNumberInput(event)])}
+        oninput={event => actions.setB(decodeNumberInput(event))}
       />
     </div>
     <h2>
@@ -26,5 +45,6 @@ export default state => (
     <pre>
       <code>state: {JSON.stringify(state, null, 2)}</code>
     </pre>
+    {!state.auth ? <SignInBtn /> : <SignOutBtn />}
   </main>
 );
